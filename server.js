@@ -10,7 +10,7 @@ server.use(express.json());
 
 const port = process.env.PORT
 
-mongoose.connect('mongodb://localhost:27017/flowers', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://YazanOdeh:12345@cluster0-shard-00-00.gvahy.mongodb.net:27017,cluster0-shard-00-01.gvahy.mongodb.net:27017,cluster0-shard-00-02.gvahy.mongodb.net:27017/flowers?ssl=true&replicaSet=atlas-hka2ni-shard-0&authSource=admin&retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
 const flowerSchema = new mongoose.Schema({
     email: String,
